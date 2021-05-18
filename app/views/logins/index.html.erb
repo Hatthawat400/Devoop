@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Titles -->
+          <h2 class="active"> Sign In </h2>
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="https://pbs.twimg.com/profile_images/1093454818725621760/q4SOZFpX.jpg" id="icon" alt="User Icon" />
+          </div>
+      
+          <!-- Login-->
+          <form>
+            <input type="text" id="email" class="fadeIn second" name="email" placeholder="email">
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+          </form>
+          
+          <%= link_to "LOGIN", articles_path %>
+
+        <div class="integracoes">
+            <i class="fa fa-3x fa-facebook-square grow"></i>
+            <i class="fa fa-3x fa-google-plus-square grow"></i>
+        </div>
+      
+        </div>
+      </div>
+</body>
+</html>

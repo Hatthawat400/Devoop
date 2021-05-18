@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+    <ul class="navigation">
+    <% if user_signed_in? %>
+        <li><a href="#">Home</a></li>
+        <li><%= link_to "article",articles_path%></li>
+        <li><%= link_to "inquires",inquires_path%></li>
+      </ul>
+
+      <p class="navbar-text float-right">
+
+  Logged in as <strong><%= current_user.email %></strong>.
+ 
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+</p>
+
+    <div class="wrapper">
+      <article class="main">
+        <ul>
+            <li>
+              <img src="https://kaijeaw.in.th/wp-content/uploads/2020/02/%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B8%B3.jpg" alt="A Toyota Previa covered in graffiti" loading="lazy">
+            </li>
+            <li>
+    </article>
+        <aside class="aside aside-1">Post one</aside>
+      </div>
+      <ul class="flex-container">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+        <li class="flex-item">6</li>
+      </ul>
+</body>
+</html>
